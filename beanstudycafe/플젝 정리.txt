@@ -1,0 +1,158 @@
+DB
+
+code 회원 / 비회원 int
+name [15] 이름 string /varchar2
+tel [15] id /varchar2 
+mail 이메일 varchar2(30)
+password[15] varchar2
+intime 들어온시간 sysdate
+outtime 나간시간  찾아보기
+tottime 총시간 int
+payment 결제금액 int
+sit 좌석 int
+room 룸 int
+locker 사물함 int
+
+
+테이블명 beancafe
+
+
+seq_bean
+
+
+class명
+
+사이즈는 600 ,800
+
+StartP  - 카드레이아웃  -하나의 프레임 상속
+	
+Login    - 카드레이아웃  -하나의 프레임상속
+	
+
+Ragister  - 가입   -하나의 프레임 상속  /////사이즈는 400/500
+	이름 - name
+	핸드폰 - phone
+	비밀번호 - password
+	이메일 - mail
+	
+RagisterUpdate   -가입수정   -하나의 프레임 상속     //////사이즈는 400/500
+	이름 - name
+	핸드폰 - phone
+	비밀번호 - password
+	이메일 - mail
+
+Manager - 관리자  -하나의 프레임상속  -카드레이아웃
+MemberList - 회원리스트창 -하나의 프레임상속
+PaymentList -회원매출창 -하나의 프레임상속
+
+
+MainP - 무서운 메인창 -하나의 프레임 상속  - 스레드(Runable) -카드레이아웃 /extend Thread 자체스레드
+
+
+
+
+
+로그인창은 회원가입창이나 로그인창에 떠있는걸 db에 갖고와야함
+가져오는것도 있고 나가는것도 있음
+
+민지언니는 회원비어놓고 진행하고
+
+나는 수정이라서 미리 DB에 회원을 좀 넣어두기
+
+
+
+
+
+
+
+
+
+회원가입
+아이디(핸드폰번호)
+
+
+
+로그인할땐
+
+아이디
+비밀번호
+
+
+비회원일때
+핸드폰 : 텍스트필드
+이메일 :
+인증번호 : 
+
+
+DTO
+cafeDTO
+
+code Int
+name String 
+tel String
+mail String
+password String
+tottime Int
+payment Int
+sit int
+room int
+locker Int
+
+
+
+
+DAO
+cafeDAO	
+
+
+
+
+
+
+
+생성자에 드라이브 로딩
+getConnection 드라이브 접속
+insertBeanCafe메소드
+updateBeanCafe메소드  db정보 수정 /회원자기정보수정/입실할때수정/퇴실할때/좌석이동            --수정(내작업)
+deleteBeanCafe메소드 //관리자에서 삭제하는거
+selectBeanCafe 메소드 //데이터베이스에서 정보얻어오기rs --수정(내작업)
+chasgeSeatBeanCafe 메소드 //좌석이동
+
+
+
+getInstance()메소드
+
+
+
+
+
+
+
+좌석은 20개고 룸은 3개
+
+
+
+
+
+beanstudycafe_menu
+
+class
+
+RegisterUpdate
+MainP
+CafeClient
+CafeServer
+CafeHandler
+
+
+
+
+
+
+
+
+
+
+
+
+
